@@ -97,6 +97,8 @@ function App() {
                     borderRadius: "15px",
                   }}
                   fontWeight={600}
+                  component={"a"}
+                  href={item.path}
                 >
                   {item.name} {/* Only render the name here */}
                 </Typography>
@@ -107,6 +109,8 @@ function App() {
                   key={index}
                   sx={{ cursor: "pointer" }}
                   fontWeight={600}
+                  component={"a"}
+                  href={item.path}
                 >
                   {item.name} {/* Only render the name here */}
                 </Typography>
