@@ -7,6 +7,7 @@ import {
   ListItem,
   Typography,
   Grid2,
+  Link,
 } from "@mui/material";
 
 import logo from "./assets/logo.png";
@@ -85,35 +86,33 @@ function App() {
           >
             {pageList.map((item, index) =>
               item.path === "/member" ? (
-                <Typography
-                  variant="body1"
-                  color="white"
-                  key={index}
-                  sx={{
-                    cursor: "pointer",
-                    px: "13px",
-                    py: "11px",
-                    bgcolor: "#F79B52",
-                    borderRadius: "15px",
-                  }}
-                  fontWeight={600}
-                  component={"a"}
-                  href={item.path}
-                >
-                  {item.name} {/* Only render the name here */}
-                </Typography>
+                <Link href={item.path} key={index} underline="none">
+                  <Typography
+                    variant="body1"
+                    color="white"
+                    sx={{
+                      cursor: "pointer",
+                      px: "13px",
+                      py: "11px",
+                      bgcolor: "#F79B52",
+                      borderRadius: "15px",
+                    }}
+                    fontWeight={600}
+                  >
+                    {item.name} {/* Only render the name here */}
+                  </Typography>
+                </Link>
               ) : (
-                <Typography
-                  variant="body1"
-                  color="initial"
-                  key={index}
-                  sx={{ cursor: "pointer" }}
-                  fontWeight={600}
-                  component={"a"}
-                  href={item.path}
-                >
-                  {item.name} {/* Only render the name here */}
-                </Typography>
+                <Link href={item.path} key={index} underline="none">
+                  <Typography
+                    variant="body1"
+                    color="initial"
+                    sx={{ cursor: "pointer" }}
+                    fontWeight={600}
+                  >
+                    {item.name} {/* Only render the name here */}
+                  </Typography>
+                </Link>
               )
             )}
           </Box>
