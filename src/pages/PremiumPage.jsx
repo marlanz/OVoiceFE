@@ -204,6 +204,7 @@ function PremiumPage() {
                 width: "100%",
                 py: "12px",
                 marginTop: "40px",
+                fontSize: "20px",
               }}
             >
               Chọn
