@@ -12,7 +12,7 @@ const pageList = [
   },
   {
     name: "Trở thành hội viên",
-    path: "/member",
+    path: "/premium",
   },
   {
     name: "Trang Chủ",
@@ -43,7 +43,7 @@ const Headers = () => {
         </Link>
         <Box sx={{ display: "flex", gap: 4, alignItems: "center", pr: "50px" }}>
           {pageList.map((item, index) =>
-            item.path === "/member" ? (
+            item.path === "/premium" ? (
               <Link href={item.path} key={index} underline="none">
                 <Typography
                   variant="body1"
