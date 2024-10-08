@@ -12,11 +12,10 @@ import {
   Grid2,
 } from "@mui/material";
 import loginBanner from "../assets/loginBanner.png";
-
 import Visibility from "@mui/icons-material/Visibility";
 import VisibilityOff from "@mui/icons-material/VisibilityOff";
 
-const Login = () => {
+const Register = () => {
   useEffect(() => {
     document.body.style.overflow = "hidden";
     return () => {
@@ -30,6 +29,9 @@ const Login = () => {
     email: "",
     password: "",
     remember: false,
+    confirmPassword: "",
+    lastName: "",
+    firstName: "",
   });
 
   const handleInputChange = (e) => {
@@ -69,7 +71,7 @@ const Login = () => {
           style={{
             backgroundColor: "white",
             position: "absolute",
-            top: 15,
+            top: -15,
             padding: "30px",
             borderRadius: "20px",
           }}
@@ -79,11 +81,11 @@ const Login = () => {
               <CardMedia
                 component={"img"}
                 src={loginBanner}
-                sx={{ width: "470px" }}
+                sx={{ width: "530px" }}
               />
               <div
                 className=""
-                style={{ position: "absolute", top: 470, left: 50 }}
+                style={{ position: "absolute", top: 540, left: 50 }}
               >
                 <Typography
                   variant="body1"
@@ -103,7 +105,7 @@ const Login = () => {
                 variant="body1"
                 color="initial"
                 fontSize={24}
-                sx={{ display: "flex", gap: 1, marginTop: 8 }}
+                sx={{ display: "flex", gap: 1 }}
               >
                 Chào mừng bạn đến với{" "}
                 <Typography
@@ -115,8 +117,55 @@ const Login = () => {
                   OVoice
                 </Typography>
               </Typography>
-
-              <div className="email-input" style={{ marginTop: "30px" }}>
+              <div
+                className="name-input"
+                style={{
+                  marginTop: "30px",
+                  display: "flex",
+                  justifyContent: "space-between",
+                  gap: 20,
+                }}
+              >
+                <div className="first-name">
+                  <Typography variant="body1" color="initial">
+                    Họ
+                  </Typography>
+                  <TextField
+                    id=""
+                    placeholder="Nhập họ của bạn"
+                    name="firstName"
+                    value={form.firstName}
+                    onChange={(e) => handleInputChange(e)}
+                    sx={{
+                      "& .MuiOutlinedInput-root": {
+                        borderRadius: "15px",
+                      },
+                      marginTop: "12px",
+                    }}
+                    fullWidth
+                  />
+                </div>
+                <div className="last-name">
+                  <Typography variant="body1" color="initial">
+                    Tên
+                  </Typography>
+                  <TextField
+                    id=""
+                    placeholder="Nhập tên của bạn"
+                    name="lastName"
+                    value={form.lastName}
+                    onChange={(e) => handleInputChange(e)}
+                    sx={{
+                      "& .MuiOutlinedInput-root": {
+                        borderRadius: "15px",
+                      },
+                      marginTop: "12px",
+                    }}
+                    fullWidth
+                  />
+                </div>
+              </div>
+              <div className="email-input" style={{ marginTop: "20px" }}>
                 <Typography variant="body1" color="initial">
                   Địa chỉ email
                 </Typography>
@@ -165,6 +214,36 @@ const Login = () => {
                   fullWidth
                 />
               </div>
+              <div className="password-input" style={{ marginTop: "20px" }}>
+                <Typography variant="body1" color="initial">
+                  Nhập lại mật khẩu
+                </Typography>
+                <OutlinedInput
+                  id=""
+                  placeholder="Nhập mật khẩu của bạn"
+                  name="password"
+                  value={form.password}
+                  onChange={(e) => handleInputChange(e)}
+                  type={showPassword ? "text" : "password"}
+                  endAdornment={
+                    <InputAdornment position="end">
+                      <IconButton
+                        onClick={handleClickShowPassword}
+                        onMouseDown={handleMouseDownPassword}
+                        onMouseUp={handleMouseUpPassword}
+                        edge="end"
+                      >
+                        {showPassword ? <VisibilityOff /> : <Visibility />}
+                      </IconButton>
+                    </InputAdornment>
+                  }
+                  sx={{
+                    borderRadius: "15px",
+                    marginTop: "12px",
+                  }}
+                  fullWidth
+                />
+              </div>
               <Button
                 sx={{
                   marginTop: "30px",
@@ -178,7 +257,7 @@ const Login = () => {
                   fontSize: "16px",
                 }}
               >
-                Đăng Nhập
+                Đăng Ký
               </Button>
               <Typography
                 variant="body1"
@@ -187,9 +266,9 @@ const Login = () => {
                 textAlign={"center"}
                 sx={{ marginTop: "15px" }}
               >
-                Chưa có tài khoản?{" "}
-                <Link href="/register" sx={{ cursor: "pointer" }}>
-                  Đăng kí ngay!
+                Có tài khoản rồi{" "}
+                <Link href="/login" sx={{ cursor: "pointer" }}>
+                  Đăng nhập ngay!
                 </Link>
               </Typography>
             </Grid2>
@@ -200,4 +279,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Register;
