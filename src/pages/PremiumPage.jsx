@@ -1,10 +1,8 @@
 import { Box, Button, CardMedia, Typography } from "@mui/material";
 import banner from "../assets/banner.png";
-
 import Headers from "../components/Headers";
 import StarIcon from "@mui/icons-material/Star";
 import logo from "../assets/logo.png";
-import { Star } from "@mui/icons-material";
 import Footers from "../components/Footers";
 
 const benefits = [
