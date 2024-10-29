@@ -7,6 +7,7 @@ import Login from "./pages/Login.jsx";
 import Register from "./pages/Register.jsx";
 import PremiumPage from "./pages/PremiumPage.jsx";
 import HomePage from "./pages/HomePage.jsx";
+import SearchPage from "./pages/SearchPage.jsx";
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
   {
     path: "/home",
     element: <HomePage />,
+  },
+  {
+    path: "/search",
+    element: <SearchPage />,
   },
 ]);
 

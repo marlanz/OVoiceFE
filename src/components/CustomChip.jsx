@@ -1,10 +1,10 @@
 import { Typography } from "@mui/material";
 
-const CustomChip = ({ title, bgColor, index, fontSize, fontWeight }) => {
+const CustomChip = ({ title, bgColor, index, fontSize, fontWeight, color }) => {
   return (
     <Typography
       variant="body1"
-      color="white"
+      color={color || "white"}
       sx={{
         bgcolor: bgColor,
         borderRadius: "10px",
