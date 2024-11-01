@@ -8,6 +8,7 @@ import Register from "./pages/Register.jsx";
 import PremiumPage from "./pages/PremiumPage.jsx";
 import HomePage from "./pages/HomePage.jsx";
 import SearchPage from "./pages/SearchPage.jsx";
+import DetailBook from "./pages/DetailBook.jsx";
 
 const router = createBrowserRouter([
   {
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
   {
     path: "/search",
     element: <SearchPage />,
+  },
+  {
+    path: "/search/id",
+    element: <DetailBook />,
   },
 ]);
 
