@@ -114,7 +114,6 @@ const BookList = () => {
         display: "flex",
         justifyContent: "center",
         padding: "0 42px",
-        marginTop: "30px",
       }}
     >
       <div

@@ -5,6 +5,7 @@ import CustomChip from "../components/CustomChip";
 import { WidthFull } from "@mui/icons-material";
 import Headers from "../components/Headers";
 import BookCard from "../components/BookCard";
+import { useNavigate } from "react-router-dom";
 
 const tags = ["Phiêu lưu", "Giả tưởng", "Thần bí"];
 const bookData = [
@@ -111,6 +112,10 @@ const bookData = [
 ];
 
 const DetailBook = () => {
+  const navigate = useNavigate();
+  const handleNavigate = () => {
+    navigate("/transaction");
+  };
   return (
     <div>
       <Headers />
@@ -200,6 +205,7 @@ const DetailBook = () => {
               fontWeight: 600,
               my: "30px",
             }}
+            onClick={() => handleNavigate()}
           >
             Mua ngay
           </Button>
@@ -267,8 +273,7 @@ const DetailBook = () => {
         style={{
           display: "flex",
           justifyContent: "center",
-          padding: "0 42px",
-          marginTop: "30px",
+          padding: "30px 42px",
         }}
       >
         <div

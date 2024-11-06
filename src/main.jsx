@@ -9,6 +9,8 @@ import PremiumPage from "./pages/PremiumPage.jsx";
 import HomePage from "./pages/HomePage.jsx";
 import SearchPage from "./pages/SearchPage.jsx";
 import DetailBook from "./pages/DetailBook.jsx";
+import Seller from "./pages/Seller.jsx";
+import Transaction from "./pages/Transaction.jsx";
 
 const router = createBrowserRouter([
   {
@@ -38,6 +40,14 @@ const router = createBrowserRouter([
   {
     path: "/search/id",
     element: <DetailBook />,
+  },
+  {
+    path: "/seller/id",
+    element: <Seller />,
+  },
+  {
+    path: "/transaction",
+    element: <Transaction />,
   },
 ]);
 

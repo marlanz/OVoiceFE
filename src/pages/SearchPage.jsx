@@ -137,7 +137,9 @@ const SearchPage = () => {
           Tìm sách
         </Button>
       </div>
-      <BookList />
+      <div className="" style={{ padding: "30px 0" }}>
+        <BookList />
+      </div>
     </div>
   );
 };

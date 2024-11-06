@@ -3,10 +3,6 @@ import logo from "../assets/logo.png";
 
 const pageList = [
   {
-    name: "Thể Loại",
-    path: "/category",
-  },
-  {
     name: "Tìm Kiếm",
     path: "/search",
   },
